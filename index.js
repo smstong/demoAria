@@ -1,10 +1,10 @@
 window.addEventListener("DOMContentLoaded", (e) => {
     // initialize tab wigets
     const init_tab = () => {
-        const tablists = document.querySelectorAll('[class="tab-list"]');
+        const tablists = document.querySelectorAll('.tab-list');
         tablists.forEach((tablist) => {
             tablist.setAttribute("role", "tablist");
-            const tabs = tablist.querySelectorAll('[class="tab"]');
+            const tabs = tablist.querySelectorAll('.tab');
 
             tabs.forEach((tab) => {
                 tab.setAttribute("role", "tab");
