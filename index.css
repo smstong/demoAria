@@ -45,16 +45,6 @@ aside {
     background-color: brown;
     grid-area: aside;
 }
-
-.tablist {
-    display: flex;
-    flex-direction: row;
-}
-
-.tab {
-    flex-grow: 1;
-}
-
 .footer-list {
     background-color: red;
     flex-direction: column;
@@ -73,4 +63,53 @@ aside {
 
 .footer-list > li {
     background-color: green;
+}
+
+/********************** tab widget *********************/
+.tab-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.tab {
+    flex-grow: 1;
+}
+
+.tab-selected, .tab:hover{
+    background-color: aqua;
+}
+/************** accordion widget *****************/
+.accordion {
+    width: 100%;
+    text-align: left;
+    background-color: #eee;
+    color:#444;
+    padding: 18px;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion::after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion-active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion-active::after {
+    content: '\2796';
+}
+
+.accordion-panel {
+    background-color: white;
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
