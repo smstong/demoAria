@@ -25,12 +25,12 @@
         </header>
         <!-- main -->
         <main>
-            <div class="ut-color-bar">
-                <span class="utm-bar"></span>
-                <span class="utsg-bar"></span>
-                <span class="utsc-bar"></span>
-            </div>
             <div class="login-box">
+                <div class="ut-color-bar">
+                    <span class="utm-bar"></span>
+                    <span class="utsg-bar"></span>
+                    <span class="utsc-bar"></span>
+                </div>
                 <form action="$flowExecutionUrl" method="post">
                     <div class="form-group">
                         <label for="username">UTORid / JOINid</label><br />
@@ -43,58 +43,79 @@
                     <button type="submit" name="_eventId_proceed">log in 🢡</button>
                 </form>
                 <div class="rpui">
+                    rpui
                 </div>
             </div>
-            <div class="alert-warning"></div>
-            <div class="alert-danger"></div>
-        </main>
-        <!-- doc part -->
-        <aside>
-            <div class="tab-list">
-                <button class="tab tab-selected">Login Problems</button>
-                <button class="tab">tab2</button>
-                <button class="tab">tab3</button>
+            <div class="alert alert-warning">
+                <b>Warning</b>: Your password may not be sync'd. Visit our verify password page.
             </div>
-            <article class="tab-panel">
-                <h2>Login Problems</h2>
-                <p>
-                    If you believe you know your password, please visit <a href="#">UTORid Password Verification Page</a> to try it. We cannot retrieve your password. We store a one-way encryption: we can verify a password, but we cannot decrypt what we store. If you have forgotten your password, a new password must be chosen using a password reset procedure.
-                </p>
-                <a href="">verify password</a>
-                <button class="accordion">Password Requirements</button>
-                <div class="accordion-panel">
+            <div class="alert alert-danger">
+                <b>Alert</b>: Completely exit your web browser when you are finished.
+            </div>
+            </main>
+            <!-- doc part -->
+            <aside>
+                <div class="tab-list">
+                    <button class="tab tab-selected">Login Problems</button>
+                    <button class="tab">tab2</button>
+                    <button class="tab">tab3</button>
+                </div>
+                <article class="tab-panel tab-panel-active">
+                    <h2>Login Problems</h2>
                     <p>
-                    UofT is updating its password authentication systems. This weblogin service uses an authentication mechanism that will not accept a password that does not meet current requirements. If your password is relatively weak (and, likely, old), we highly recommend you change it. And it may be necessary to change your password in order to use this login service. In the near future, all authentication will require passwords meet stronger rules.
+                        If you believe you know your password, please visit <a href="#">UTORid Password Verification Page</a> to try
+                        it. We cannot retrieve your password. We store a one-way encryption: we can verify a password, but we cannot
+                        decrypt what we store. If you have forgotten your password, a new password must be chosen using a password
+                        reset procedure.
                     </p>
-                    <a href="">Change Password</a>
-                </div>
-                <button class="accordion">UTORid Login problems</button>
-                <div class="accordion-panel">
-                    <p>UTORid Account Recovery Service</p>
-                    <p>If you have registered with UTORid Account Recovery Service, you can use the UTORid password reset tool.</p>
-                    <p>If you are not registered, ...</p>
-                    <p>If you are not registered with the UTORid Account Recovery Service, please visit your campus help desk:</p>
-                    <p><a href="#">St. George UTM UTSC</a></p>
-                    <p>Note: U of T staff, faculty, students, and alumni may register for UTORid Account Recovery Service to enable convenient password reset via alternate email or SMS (mobile phone). You will need to know your UTORid password to register for this service.
+                    <a href="">verify password</a>
+                    <button class="accordion">Password Requirements</button>
+                    <div class="accordion-panel">
+                        <p>
+                            UofT is updating its password authentication systems. This weblogin service uses an authentication
+                            mechanism that will not accept a password that does not meet current requirements. If your password is
+                            relatively weak (and, likely, old), we highly recommend you change it. And it may be necessary to change
+                            your password in order to use this login service. In the near future, all authentication will require
+                            passwords meet stronger rules.
                         </p>
-                </div>
-                <button class="accordion">JOINid Login Problems</button>
-                <div class="accordion-panel">
-                    <p>
-                        Applicants to the University of Toronto have a JOINid. If, after attempting to log in with your JOINid, you receive an error message stating "Authentication Failed", try to <a href="#">re-enable your JOINid / reset the password</a> and try again.
-                    </p>
-                </div>
-            </article>
-        </aside>
-        <!-- footer part -->
-        <footer>
-            <ul class="footer-list">
-                <li>[build 2021-Jul-14 AODA]</li>
-                <li><a href="http://surveys.utoronto.ca/feedback/" title=""><b>Site Feedback</b></a></li>
-                <li><a href="http://www.utoronto.ca/accessibility.htm" title=""><b>Accessibility</b></a></li>
-                <li>&copy; University of Toronto</li>
-            </ul>
-        </footer>
-    </div>
-</body>
-</html>
+                        <a href="">Change Password</a>
+                    </div>
+                    <button class="accordion">UTORid Login problems</button>
+                    <div class="accordion-panel">
+                        <p>UTORid Account Recovery Service</p>
+                        <p>If you have registered with UTORid Account Recovery Service, you can use the UTORid password reset tool.
+                        </p>
+                        <p>If you are not registered, ...</p>
+                        <p>If you are not registered with the UTORid Account Recovery Service, please visit your campus help desk:
+                        </p>
+                        <p><a href="#">St. George UTM UTSC</a></p>
+                        <p>Note: U of T staff, faculty, students, and alumni may register for UTORid Account Recovery Service to
+                            enable convenient password reset via alternate email or SMS (mobile phone). You will need to know your
+                            UTORid password to register for this service.
+                        </p>
+                    </div>
+                    <button class="accordion">JOINid Login Problems</button>
+                    <div class="accordion-panel">
+                        <p>
+                            Applicants to the University of Toronto have a JOINid. If, after attempting to log in with your JOINid,
+                            you receive an error message stating "Authentication Failed", try to <a href="#">re-enable your JOINid /
+                                reset the password</a> and try again.
+                        </p>
+                    </div>
+                </article>
+                <article class="tab-panel">tab2</article>
+                <article class="tab-panel">tab3</article>
+            </aside>
+            <!-- footer part -->
+            <footer>
+                <ul class="footer-list">
+                    <li>[build 2021-Jul-14 AODA]</li>
+                    <li><a href="http://surveys.utoronto.ca/feedback/" title=""><b>Site Feedback</b></a></li>
+                    <li><a href="http://www.utoronto.ca/accessibility.htm" title=""><b>Accessibility</b></a></li>
+                    <li>&copy; University of Toronto</li>
+                </ul>
+            </footer>
+            </div>
+            </body>
+            
+            </html>

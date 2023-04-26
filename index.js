@@ -5,21 +5,32 @@ window.addEventListener("DOMContentLoaded", (e) => {
         tablists.forEach((tablist) => {
             tablist.setAttribute("role", "tablist");
             const tabs = tablist.querySelectorAll('.tab');
+            const panels = tablist.parentElement.querySelectorAll('.tab-panel');
 
-            tabs.forEach((tab) => {
+            // select a tab
+            const selectTab = (index) => {
+                tabs.forEach((tab) => {
+                    tab.classList.remove("tab-selected");
+                    tab.setAttribute("aria-selected", "false");
+                });
+
+                panels.forEach((panel)=>{
+                    panel.classList.remove("tab-panel-active");
+                });
+
+                if (index >=0 && index<tabs.length ) {
+                    tabs[index].classList.add("tab-selected");
+                    tabs[index].setAttribute("aria-selected", "true");
+                    panels[index].classList.add("tab-panel-active");
+                }
+            }
+            tabs.forEach((tab, i) => {
                 tab.setAttribute("role", "tab");
                 if (tab.classList.contains("tab-selected")) {
-                    tab.setAttribute("aria-selected", "true");
-                } else {
-                    tab.setAttribute("aria-selected", "false");
+                    selectTab(i);
                 }
                 tab.addEventListener("click", function () {
-                    tabs.forEach((tab)=>{
-                        tab.classList.remove("tab-selected");
-                        tab.setAttribute("aria-selected", "false");
-                    });
-                    this.classList.add("tab-selected");
-                    this.setAttribute("aria-selected", "true");
+                    selectTab(i);
                 });
             });
         });
@@ -27,15 +38,15 @@ window.addEventListener("DOMContentLoaded", (e) => {
     // initalize accordion widgets
     // enable ARIA
     const init_accordion = () => {
-        const accs = document.querySelectorAll('[class="accordion"]');
+        const accs = document.querySelectorAll('.accordion');
         accs.forEach((acc) => {
-            if (acc.classList.contains("accordion-active")) {
+            if (acc.classList.contains("accordion-expanded")) {
                 acc.setAttribute("aria-expanded", "true");
             } else {
                 acc.setAttribute("aria-expanded", "false");
             }
             acc.addEventListener("click", function () {
-                this.classList.toggle("accordion-active");
+                this.classList.toggle("accordion-expanded");
                 const panel = this.nextElementSibling;
                 if (panel.style.display == "block") {
                     panel.style.display = "none";
