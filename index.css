@@ -6,6 +6,9 @@
 body{
     background-color: white;
 }
+p{
+    text-align: justify;
+}
 h1, h2, h3,h4,h5,h6 {
   font-family: 'Open Sans Condensed',sans-serif;
   font-weight: 500;
@@ -24,7 +27,7 @@ img {
 
 /************** Page layout *************************/
 .page{
-    max-width: 1170;
+    max-width: 1170px;
     width: 90%;
     margin: 0 auto;
     display: grid;
@@ -111,6 +114,10 @@ main {
 .alert-danger {
     background-color: #f2dede;
     border-color: #ebccd1;
+}
+
+.rpui {
+    padding: 15px;
 }
 /********************** login-box *********************/
 .login-box {
